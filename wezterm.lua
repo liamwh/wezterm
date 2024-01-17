@@ -11,6 +11,9 @@ if wezterm.target_triple:find("windows") then
     config.default_prog = { "wsl.exe" }
 end
 
+config.keys = {
+    { key = "Space", mods = "SHIFT", action = wezterm.action { SendString = " " } },
+}
 config.enable_wayland = false
 config.window_decorations = "NONE"
 config.hide_tab_bar_if_only_one_tab = true
