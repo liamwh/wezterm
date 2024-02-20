@@ -8,14 +8,14 @@ config.font = wezterm.font("JetBrains Mono")
 config.harfbuzz_features = { "liga=1" }
 
 if wezterm.target_triple:find("windows") then
-    config.default_prog = { "wsl.exe" }
+	config.default_prog = { "wsl.exe" }
 end
 
 config.keys = {
-    { key = "Space", mods = "SHIFT", action = wezterm.action { SendString = " " } },
+	{ key = "Space", mods = "SHIFT", action = wezterm.action({ SendString = " " }) },
 }
 config.enable_wayland = false
-config.window_decorations = "NONE"
+config.window_decorations = "RESIZE"
 config.hide_tab_bar_if_only_one_tab = true
 
 -- finally, return the configuration to wezterm
