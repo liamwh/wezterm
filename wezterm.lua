@@ -1,6 +1,5 @@
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
-
 local config = wezterm.config_builder and wezterm.config_builder() or {}
 
 config.color_scheme = "ayu"
@@ -14,6 +13,7 @@ end
 config.keys = {
 	{ key = "Space", mods = "SHIFT", action = wezterm.action({ SendString = " " }) },
 }
+config.use_dead_keys = false
 config.enable_wayland = false
 config.window_decorations = "RESIZE"
 config.hide_tab_bar_if_only_one_tab = true
